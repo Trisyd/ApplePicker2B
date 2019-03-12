@@ -31,7 +31,7 @@ public class SceneMasterController : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("Splash");
         //musicSlider.normalizedValue = PlayerPrefs.HasKey("Master Volume") ? PlayerPrefs.GetFloat("Master Volume") : 1;
         //musicSlider.Set(PlayerPrefs.GetFloat("Master Volume") , 1);
         //appleSFXslider.value = PlayerPrefs.GetFloat("Master Volume");
@@ -40,6 +40,11 @@ public class SceneMasterController : MonoBehaviour
         //musicSlider.value = PlayerPrefs.GetFloat("Master Volume");
 
         //musicSlider.value = appleSFXSliderValue;
+    }
+
+    public void LoadScores()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
     public void LoadGame()
