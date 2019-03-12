@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class FallApple : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class FallApple : MonoBehaviour
             BasketControl.lives -= 1;
             if (BasketControl.lives == 0)
             {
+                ManageHighScores(BasketControl.playerScore);
                 SceneManager.LoadScene("Settings");
                 BasketControl.lives = 2;
                 BasketControl.playerScore = 0;
@@ -59,6 +61,38 @@ public class FallApple : MonoBehaviour
             }
             //BasketControl.finalScore.text = BasketControl.playerScore.ToString();
             Destroy(gameObject);
+        }
+    }
+
+    public void ManageHighScores(int s)
+    {
+        int scoreCount = 1;
+        while (scoreCount < 11)
+        {
+            if (PlayerPrefs.HasKey("HighScore" + scoreCount))
+            {
+                if (s > PlayerPrefs.GetInt("HighScore" + scoreCount))
+                {
+                    int scoreCountFromBottom = 10;
+                    while (scoreCountFromBottom > scoreCount)
+                    {
+                        if (PlayerPrefs.HasKey("HighScore" + scoreCountFromBottom))
+                        {
+                            PlayerPrefs.SetInt("HighScore" + scoreCountFromBottom, PlayerPrefs.GetInt("HighScore" + (scoreCountFromBottom - 1)));
+                        }
+                        scoreCountFromBottom -= 1;
+                        continue;
+                    }
+                    PlayerPrefs.SetInt("HighScore" + scoreCount, s);
+                    break;
+                }
+
+                else
+                {
+                    scoreCount += 1;
+                    continue;
+                }
+            }
         }
     }
 }
