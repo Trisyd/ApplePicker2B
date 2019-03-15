@@ -17,6 +17,12 @@ public class SceneMasterController : MonoBehaviour
     public GameObject mainCamera;
     public GameObject audioManager;
 
+    private void Awake()
+    {
+        PlayerPrefs.SetFloat("Master Volume", 1);
+        PlayerPrefs.SetFloat("VFX Volume", 1);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,14 +75,14 @@ public class SceneMasterController : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetMasterVolume()
-    {
-        PlayerPrefs.SetFloat("Master Volume", musicSlider.value);
-    }
+    //public void SetMasterVolume()
+    //{
+    //    PlayerPrefs.SetFloat("Master Volume", musicSlider.value);
+    //}
 
-    public void SetAppleSFXVolume()
-    {
-        PlayerPrefs.SetFloat("SFX Volume", appleSFXslider.value);
-        //appleSFXSliderValue = appleSFXslider.value;
-    }
+    //public void SetAppleSFXVolume()
+    //{
+    //    playerprefs.setfloat("sfx volume", applesfxslider.value);
+    //    applesfxslidervalue = applesfxslider.value;
+    //}
 }
