@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneMasterController : MonoBehaviour
 {
+    public Canvas canvas;
+
     public Slider appleSFXslider;
     //float appleSFXSliderValue = 1;
     public Slider musicSlider;
+
+    private Text hstext;
 
     public GameObject mainCamera;
     public GameObject audioManager;
@@ -45,6 +49,10 @@ public class SceneMasterController : MonoBehaviour
     public void LoadScores()
     {
         SceneManager.LoadScene("GameOver");
+        hstext = canvas.GetComponent<Text>();
+        hstext.text = "Test String Working";
+        Debug.Log("String should be up in high scores");
+        //highScores = GetComponent<Text>().text;
     }
 
     public void LoadGame()

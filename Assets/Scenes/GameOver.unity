@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 14481673}
   - component: {fileID: 14481672}
   - component: {fileID: 14481671}
+  - component: {fileID: 14481674}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -178,6 +179,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14481674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14481670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f12c14fb6149147822b36fc4f5b358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hstext: {fileID: 1547842447}
 --- !u!1 &116704444
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,25 +648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score 1
-
-    Score 2
-
-    Score 3
-
-    Score 4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    00
+  m_Text: '
 
 '
 --- !u!222 &1547842448
