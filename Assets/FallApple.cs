@@ -93,6 +93,10 @@ public class FallApple : MonoBehaviour
                     continue;
                 }
             }
+            else
+            {
+                PlayerPrefs.SetInt("HighScore" + scoreCount, s);
+            }
         }
     }
 }
