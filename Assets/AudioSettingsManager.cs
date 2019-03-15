@@ -18,8 +18,17 @@ public class AudioSettingsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void SetMasterVolume()
+    {
         float masterVolume = masterSlider.value;
         PlayerPrefs.SetFloat("Master Volume", masterVolume);
+    }
+
+    public void SetSFXVolume()
+    {
         float vfxVolume = vfxSlider.value;
         PlayerPrefs.SetFloat("VFX Volume", vfxVolume);
     }

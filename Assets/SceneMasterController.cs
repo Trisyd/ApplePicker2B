@@ -8,9 +8,9 @@ public class SceneMasterController : MonoBehaviour
 {
     public Canvas canvas;
 
-    public Slider appleSFXslider;
+    //public Slider appleSFXslider;
     //float appleSFXSliderValue = 1;
-    public Slider musicSlider;
+    //public Slider musicSlider;
 
     private Text hstext;
 
@@ -41,7 +41,7 @@ public class SceneMasterController : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Splash");
+        SceneManager.LoadScene("Settings");
         //musicSlider.normalizedValue = PlayerPrefs.HasKey("Master Volume") ? PlayerPrefs.GetFloat("Master Volume") : 1;
         //musicSlider.Set(PlayerPrefs.GetFloat("Master Volume") , 1);
         //appleSFXslider.value = PlayerPrefs.GetFloat("Master Volume");

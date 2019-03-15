@@ -609,7 +609,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1583667829}
+      - m_Target: {fileID: 969981973}
         m_MethodName: SetMasterVolume
         m_Mode: 1
         m_Arguments:
@@ -1603,7 +1603,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773917771}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 49d98dc041fe21046bbff2f94dd15bb5, type: 3}
@@ -2036,8 +2036,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1583667829}
-        m_MethodName: SetAppleSFXVolume
+      - m_Target: {fileID: 969981973}
+        m_MethodName: SetSFXVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
