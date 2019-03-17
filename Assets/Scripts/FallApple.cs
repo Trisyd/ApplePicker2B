@@ -20,7 +20,7 @@ public class FallApple : MonoBehaviour
         DontDestroyOnLoad(appleCollectionAudioSFX);
 
         audioSource.volume = PlayerPrefs.GetFloat("SFX Volume", 1);
-        Debug.Log("SFX Volume set to" + audioSource.volume);
+        //Debug.Log("SFX Volume set to" + audioSource.volume);
     }
 
     // Update is called once per frame
