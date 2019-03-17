@@ -5,19 +5,25 @@ using UnityEngine.UI;
 
 public class AudioSettingsManager : MonoBehaviour
 {
-    public GameObject neededGameObject;
-    public AudioSource audioSource;
+    public GameObject neededSceneControllerObject;
+    public AudioSource masterAudioSource;
+    public GameObject neededAppleObject;
+    public AudioSource appleSFXaudio;
     [SerializeField] Slider masterSlider;
     [SerializeField] Slider vfxSlider;
 
     // Start is called before the first frame update
     void Start()
     {
-        neededGameObject = GameObject.FindGameObjectWithTag("GameController");
-        audioSource = FindObjectOfType<AudioSource>();
+        neededSceneControllerObject = GameObject.FindGameObjectWithTag("GameController");
+        masterAudioSource = neededSceneControllerObject.GetComponent<AudioSource>();
+        //masterAudioSource = FindObjectOfType<AudioSource>();
+        neededAppleObject = GameObject.Find("Apple");
+        appleSFXaudio = neededAppleObject.GetComponent<AudioSource>();
+
         if (PlayerPrefs.HasKey("Master Volume")) { masterSlider.value = PlayerPrefs.GetFloat("Master Volume"); }
         else { masterSlider.value = 1; }
-        if (PlayerPrefs.HasKey("SFX Volume")) { vfxSlider.value = PlayerPrefs.GetFloat("VFX Volume"); }
+        if (PlayerPrefs.HasKey("SFX Volume")) { vfxSlider.value = PlayerPrefs.GetFloat("SFX Volume"); }
         else { vfxSlider.value = 1; }
     }
 
@@ -33,14 +39,15 @@ public class AudioSettingsManager : MonoBehaviour
         PlayerPrefs.SetFloat("Master Volume", masterVolume);
         //audioSource.volume = masterVolume;
         //AudioController2.ActuallySetMasterVolume(masterVolume);
-        audioSource = neededGameObject.GetComponent<AudioSource>();
-        audioSource.volume = masterVolume;
+        masterAudioSource.volume = masterVolume;
         Debug.Log("Master Volume has changed to:" + masterVolume);
     }
 
     public void SetSFXVolume()
     {
-        float vfxVolume = vfxSlider.value;
-        PlayerPrefs.SetFloat("VFX Volume", vfxVolume);
+        float sfxVolume = vfxSlider.value;
+        PlayerPrefs.SetFloat("SFX Volume", sfxVolume);
+        //appleSFXaudio.volume = sfxVolume;
+        Debug.Log("SFX Volume has changed to:" + sfxVolume);
     }
 }

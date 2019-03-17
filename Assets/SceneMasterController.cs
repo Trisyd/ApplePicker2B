@@ -17,6 +17,8 @@ public class SceneMasterController : MonoBehaviour
     private Text hstext;
 
     public GameObject mainCamera;
+
+    public GameObject apples;
     //public GameObject audioManager;
 
     //public AudioSource masterAudioSource;
@@ -50,13 +52,14 @@ public class SceneMasterController : MonoBehaviour
 
     }
 
-    //public static void ActuallySetMasterVolume(float v)
-    //{
-        
-    //}
-
     public void LoadMenu()
     {
+        //while (true)
+        //{
+        //    apples = GameObject.Find("Apple");
+        //    if (apples != null) { Destroy(apples); }
+        //    else { break; }
+        //}
         SceneManager.LoadScene("Settings");
         //musicSlider.normalizedValue = PlayerPrefs.HasKey("Master Volume") ? PlayerPrefs.GetFloat("Master Volume") : 1;
         //musicSlider.Set(PlayerPrefs.GetFloat("Master Volume") , 1);
@@ -70,6 +73,12 @@ public class SceneMasterController : MonoBehaviour
 
     public void LoadScores()
     {
+        //while (true)
+        //{
+        //    apples = GameObject.Find("Apple");
+        //    if (apples != null) { Destroy(apples); }
+        //    else { break; }
+        //}
         SceneManager.LoadScene("GameOver");
         //hstext = canvas.GetComponent<Text>();
         //hstext.text = "Test String Working";
@@ -79,11 +88,12 @@ public class SceneMasterController : MonoBehaviour
 
     public void LoadGame()
     {
-        Debug.Log("Loading Game");
+        //Debug.Log("Loading Game");
         //DontDestroyOnLoad(mainCamera);
         SceneManager.LoadScene("Primary");
+        //apples = GameObject.FindGameObjectsWithTag("Apple");
         //mainCamera.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Master Volume",1);
-        FallApple.FindObjectOfType<AudioSource>().volume = PlayerPrefs.GetFloat("SFX Volume",1);
+        FallApple.FindObjectOfType<AudioSource>().volume = PlayerPrefs.GetFloat("SFX Volume", 1);
     }
 
     public void CloseGame()

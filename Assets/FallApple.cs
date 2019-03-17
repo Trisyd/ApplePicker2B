@@ -19,6 +19,9 @@ public class FallApple : MonoBehaviour
         DontDestroyOnLoad(audioSource);
         DontDestroyOnLoad(appleCollectionAudioSFX);
 
+        audioSource.volume = PlayerPrefs.GetFloat("SFX Volume", 1);
+        Debug.Log("SFX Volume set to" + audioSource.volume);
+
         //Canvas canvas = GetComponent<Canvas>();
         //Text scoreTracker = canvas.GetComponent<Text>();
         //scoreText = scoreTracker.text;
@@ -53,7 +56,7 @@ public class FallApple : MonoBehaviour
             if (BasketControl.lives == 0)
             {
                 ManageHighScores(BasketControl.playerScore);
-                SceneManager.LoadScene("Settings");
+                SceneManager.LoadScene("GameOver");
                 BasketControl.lives = 2;
                 BasketControl.playerScore = 0;
                 //TreeOscillator.FindObjectOfType<Transform>().transform.position.x = 0;
@@ -92,10 +95,7 @@ public class FallApple : MonoBehaviour
                     continue;
                 }
             }
-            else
-            {
-                PlayerPrefs.SetInt("HighScore" + scoreCount, s);
-            }
+            else { PlayerPrefs.SetInt("HighScore" + scoreCount, s); }
         }
     }
 }
