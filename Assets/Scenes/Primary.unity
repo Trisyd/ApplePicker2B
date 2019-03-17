@@ -1478,5 +1478,11 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5327301101967645578, guid: 05730961901d0ca49af353ca886bdc6e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fb6bac5489905643a80004330ae2a76,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05730961901d0ca49af353ca886bdc6e, type: 3}
