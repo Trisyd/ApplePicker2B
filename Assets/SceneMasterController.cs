@@ -6,22 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class SceneMasterController : MonoBehaviour
 {
-    public Canvas canvas;
+    //public Canvas canvas;
 
     //public Slider appleSFXslider;
     //float appleSFXSliderValue = 1;
     //public Slider musicSlider;
 
+    public static SceneMasterController Instance;
+
     private Text hstext;
 
     public GameObject mainCamera;
-    public GameObject audioManager;
+    //public GameObject audioManager;
 
-    private void Awake()
+    //public AudioSource masterAudioSource;
+    public AudioClip masterAudioClip;
+
+    public void Awake()
     {
-        PlayerPrefs.SetFloat("Master Volume", 1);
-        PlayerPrefs.SetFloat("VFX Volume", 1);
+        Instance = this;
     }
+
+    //private void Awake()
+    //{
+    //    PlayerPrefs.SetFloat("Master Volume", 1);
+    //    PlayerPrefs.SetFloat("VFX Volume", 1);
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +39,21 @@ public class SceneMasterController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         DontDestroyOnLoad(mainCamera);
         //DontDestroyOnLoad(audioManager);
+        //DontDestroyOnLoad(audioManager);
     }
 
     // Update is called once per frame
     void Update()
     {
         //float appleSFXVolumeConstant = slider.value;
-        mainCamera.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Master Volume");
+        //mainCamera.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Master Volume");
 
     }
+
+    //public static void ActuallySetMasterVolume(float v)
+    //{
+        
+    //}
 
     public void LoadMenu()
     {
@@ -55,9 +71,9 @@ public class SceneMasterController : MonoBehaviour
     public void LoadScores()
     {
         SceneManager.LoadScene("GameOver");
-        hstext = canvas.GetComponent<Text>();
-        hstext.text = "Test String Working";
-        Debug.Log("String should be up in high scores");
+        //hstext = canvas.GetComponent<Text>();
+        //hstext.text = "Test String Working";
+        //Debug.Log("String should be up in high scores");
         //highScores = GetComponent<Text>().text;
     }
 
@@ -66,7 +82,7 @@ public class SceneMasterController : MonoBehaviour
         Debug.Log("Loading Game");
         //DontDestroyOnLoad(mainCamera);
         SceneManager.LoadScene("Primary");
-        mainCamera.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Master Volume",1);
+        //mainCamera.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Master Volume",1);
         FallApple.FindObjectOfType<AudioSource>().volume = PlayerPrefs.GetFloat("SFX Volume",1);
     }
 

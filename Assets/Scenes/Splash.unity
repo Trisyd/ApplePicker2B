@@ -500,6 +500,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2377994719878675762, guid: 968567ef758370b428499f084adf9ab5,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     - target: {fileID: 2377994719878675772, guid: 968567ef758370b428499f084adf9ab5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,7 +518,7 @@ PrefabInstance:
     - target: {fileID: 2377994719878675772, guid: 968567ef758370b428499f084adf9ab5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.488679
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2377994719878675772, guid: 968567ef758370b428499f084adf9ab5,
         type: 3}
@@ -554,6 +559,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377994719878675763, guid: 968567ef758370b428499f084adf9ab5,
+        type: 3}
+      propertyPath: masterAudioSource
+      value: 
+      objectReference: {fileID: 1626174694}
+    - target: {fileID: 2377994719878675763, guid: 968567ef758370b428499f084adf9ab5,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1773917771}
+    - target: {fileID: 2377994719878675763, guid: 968567ef758370b428499f084adf9ab5,
+        type: 3}
+      propertyPath: audioManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968567ef758370b428499f084adf9ab5, type: 3}
@@ -801,6 +821,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1626174695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626174693}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a89c30528bc4846ab96b9e93ade002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterAudiosource: {fileID: 1626174694}
 --- !u!1 &1773917771
 GameObject:
   m_ObjectHideFlags: 0

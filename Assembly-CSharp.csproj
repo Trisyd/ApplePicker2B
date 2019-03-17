@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AudioController.cs" />
+    <Compile Include="Assets\AudioController2.cs" />
     <Compile Include="Assets\AudioSettingsManager.cs" />
     <Compile Include="Assets\BasketControl.cs" />
     <Compile Include="Assets\FallApple.cs" />

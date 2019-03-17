@@ -620,6 +620,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 109d525f2c13b104cb1d5d510be778a2, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &650951801
@@ -983,6 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109d525f2c13b104cb1d5d510be778a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
   masterSlider: {fileID: 629566424}
   vfxSlider: {fileID: 2013235145}
 --- !u!4 &969981974
@@ -1699,7 +1711,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773917771}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1773917774
 Camera:
   m_ObjectHideFlags: 0
