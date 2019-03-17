@@ -60,14 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AudioController.cs" />
-    <Compile Include="Assets\AudioController2.cs" />
-    <Compile Include="Assets\AudioSettingsManager.cs" />
-    <Compile Include="Assets\BasketControl.cs" />
-    <Compile Include="Assets\FallApple.cs" />
-    <Compile Include="Assets\HighScoreController.cs" />
-    <Compile Include="Assets\SceneMasterController.cs" />
-    <Compile Include="Assets\TreeOscillator.cs" />
+    <Compile Include="Assets\Scripts\AudioSettingsManager.cs" />
+    <Compile Include="Assets\Scripts\BasketControl.cs" />
+    <Compile Include="Assets\Scripts\FallApple.cs" />
+    <Compile Include="Assets\Scripts\HighScoreController.cs" />
+    <Compile Include="Assets\Scripts\SceneMasterController.cs" />
+    <Compile Include="Assets\Scripts\TreeOscillator.cs" />
+    <Compile Include="Assets\Scripts-Unused\AudioController.cs" />
+    <Compile Include="Assets\Scripts-Unused\AudioController2.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/priemg/_Personal/Rensselaer/Intro to Game Programming/Project 2 Apple Picker/Project #2B Apple Picker/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
